@@ -1,5 +1,4 @@
-# Cambia "meme-translate-bot" por el nombre de tu app en Fly (fly apps create).
-app = "meme-translate-bot"
+app = "bot-global-chat"
 primary_region = "nrt"
 
 [build]
