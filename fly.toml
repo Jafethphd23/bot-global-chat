@@ -1,16 +1,29 @@
-app = "bot-global-chat"
-primary_region = "nrt"
+# fly.toml app configuration file generated for bot-global-chat on 2026-05-10T03:29:27Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'bot-global-chat'
+primary_region = 'nrt'
 
 [build]
 
-# Use "app" as the main process name (standard on Fly.io)
-[processes]
-  app = "node dist/bot.cjs"
-
 [env]
-  NODE_ENV = "production"
+  NODE_ENV = 'production'
+
+[processes]
+  app = 'node dist/bot.cjs'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
+  cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
