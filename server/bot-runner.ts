@@ -2,7 +2,7 @@ import { TwitchBot } from "./bot";
 
 const bot = new TwitchBot();
 
-const channel = process.env.BOT_CHANNEL || "nagayama_meme";
+const channel = process.env.BOT_CHANNEL || "noda_hitsuji";
 const targetLanguage = process.env.TARGET_LANGUAGE || "Japanese";
 
 console.log(`[BOT-RUNNER] Starting autonomous bot...`);
