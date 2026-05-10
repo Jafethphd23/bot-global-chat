@@ -1,0 +1,26 @@
+{
+  "name": "twitch-translate-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx server/bot-runner.ts",
+    "build": "tsx script/build.ts",
+    "start": "node dist/bot.cjs",
+    "check": "tsc"
+  },
+  "dependencies": {
+    "openai": "^6.9.1",
+    "tmi.js": "^1.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.11",
+    "@types/tmi.js": "^1.8.6",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.20.5",
+    "typescript": "5.6.3"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.8"
+  }
+}

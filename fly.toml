@@ -1,0 +1,17 @@
+# Cambia "meme-translate-bot" por el nombre de tu app en Fly (fly apps create).
+app = "meme-translate-bot"
+primary_region = "nrt"
+
+[build]
+
+[processes]
+  bot = "node dist/bot.cjs"
+
+[env]
+  NODE_ENV = "production"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
+  processes = ["bot"]
